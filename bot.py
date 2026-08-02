@@ -1,11 +1,10 @@
 import os
-from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram.ext import Application, CommandHandler
 
-TOKEN = os.getenv("8870950829:AAHrviexyWuaO1HFMH-zorVmecEAsWvfO8o")
+TOKEN = os.getenv("BOT_TOKEN")  # <-- аз Render мегирад, на аз ин ҷо
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Салом! Бот дар Render кор мекунад ✅')
+async def start(update, context):
+    await update.message.reply_text('Салом! Ман кор мекунам ✅')
 
 def main():
     print("✅ Bot started...")
